@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="com.inhancewebsiteautomationtest.tests.InhanceWebsiteIndependentTests">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="given_PageIsSecondPartOfHome_when_ThirdImageOfGalleryIsClicked_then_PageIsNavigatedToDellKeynote"/>
+        </methods>
+      </class> <!-- com.inhancewebsiteautomationtest.tests.InhanceWebsiteIndependentTests -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->
