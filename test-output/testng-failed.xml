@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.inhancewebsiteautomationtest.tests.InhanceWebsiteIndependentTests">
+      <class name="com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest">
         <methods>
-          <include name="given_PageIsNotTopOfHome_when_LogoIsPressed_then_PageIsScrolledToTop"/>
-          <include name="tearDown"/>
           <include name="setUp"/>
           <include name="afterMethod"/>
+          <include name="tearDown"/>
+          <include name="given_AboutHamburgerButton_when_Unhovered_then_Dehighlighted"/>
+          <include name="given_AboutHamburgerButton_when_Hovered_then_Dehighlighted"/>
         </methods>
-      </class> <!-- com.inhancewebsiteautomationtest.tests.InhanceWebsiteIndependentTests -->
+      </class> <!-- com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

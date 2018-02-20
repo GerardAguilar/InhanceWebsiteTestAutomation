@@ -190,16 +190,25 @@ public class InhanceWebsiteIndependentTests {
 	public void setUp() throws Exception {		
 		ClassLoader classLoader = getClass().getClassLoader();
         URL resource = classLoader.getResource("geckodriver.exe");
+        String os = System.getProperty("os.name").toLowerCase();
         File f = new File("Driver");
         if (!f.exists()) {
             f.mkdirs();
         }
-        File geckodriver = new File("Driver" + "\\geckodriver.exe");
-        if (!geckodriver.exists()) {
-        	geckodriver.createNewFile();
-            FileUtils.copyURLToFile(resource, geckodriver);
+        File geckodriver;
+
+        //In the case of a MAC, we may need to copy the tar.gz file and then reference the resulting geckodriver application
+        if(os.contains("mac")) {
+            geckodriver = new File(System.getProperty("user.dir") + "/geckodriver");  
+        }else {
+        	geckodriver = new File("Driver" + "\\geckodriver.exe"); 
+            if (!geckodriver.exists()) {
+            	geckodriver.createNewFile();
+                FileUtils.copyURLToFile(resource, geckodriver);
+            }
         }
-        String geckodriverLocation = geckodriver.getAbsolutePath();
+
+        String geckodriverLocation = geckodriver.getAbsolutePath();        
         System.setProperty("webdriver.gecko.driver", geckodriverLocation);
         
 	    driver = new FirefoxDriver();
