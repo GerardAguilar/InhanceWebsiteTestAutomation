@@ -1,25 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16525" started-at="2018-02-20T01:42:10Z" finished-at="2018-02-20T01:42:26Z">
+  <suite name="Default suite" duration-ms="48247" started-at="2018-02-20T03:03:55Z" finished-at="2018-02-20T03:04:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16525" started-at="2018-02-20T01:42:10Z" finished-at="2018-02-20T01:42:26Z">
+    <test name="Default test" duration-ms="48247" started-at="2018-02-20T03:03:55Z" finished-at="2018-02-20T03:04:43Z">
       <class name="com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="setUp" is-config="true" duration-ms="9885" started-at="2018-02-19T17:42:10Z" finished-at="2018-02-19T17:42:20Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="setUp" is-config="true" duration-ms="9661" started-at="2018-02-19T19:03:55Z" finished-at="2018-02-19T19:04:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="given_AboutHamburgerButton_when_Pressed_then_MenuIsDisplayed()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="given_AboutHamburgerButton_when_Pressed_then_MenuIsDisplayed" duration-ms="2862" started-at="2018-02-19T17:42:20Z" finished-at="2018-02-19T17:42:23Z">
+        <test-method status="PASS" signature="given_AboutHamburgerButton_when_Hovered_then_Highlighted()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="given_AboutHamburgerButton_when_Hovered_then_Highlighted" duration-ms="2529" started-at="2018-02-19T19:04:05Z" finished-at="2018-02-19T19:04:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- given_AboutHamburgerButton_when_Pressed_then_MenuIsDisplayed -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="afterMethod" is-config="true" duration-ms="3223" started-at="2018-02-19T17:42:23Z" finished-at="2018-02-19T17:42:26Z">
+        </test-method> <!-- given_AboutHamburgerButton_when_Hovered_then_Highlighted -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="afterMethod" is-config="true" duration-ms="3026" started-at="2018-02-19T19:04:07Z" finished-at="2018-02-19T19:04:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="tearDown" is-config="true" duration-ms="535" started-at="2018-02-19T17:42:26Z" finished-at="2018-02-19T17:42:26Z">
+        <test-method status="PASS" signature="given_AboutHamburgerButton_when_Pressed_then_MenuIsDisplayed()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="given_AboutHamburgerButton_when_Pressed_then_MenuIsDisplayed" duration-ms="2254" started-at="2018-02-19T19:04:10Z" finished-at="2018-02-19T19:04:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- given_AboutHamburgerButton_when_Pressed_then_MenuIsDisplayed -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="afterMethod" is-config="true" duration-ms="2928" started-at="2018-02-19T19:04:13Z" finished-at="2018-02-19T19:04:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="given_AboutHamburgerButton_when_Unhovered_then_Dehighlighted()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="given_AboutHamburgerButton_when_Unhovered_then_Dehighlighted" duration-ms="4396" started-at="2018-02-19T19:04:16Z" finished-at="2018-02-19T19:04:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- given_AboutHamburgerButton_when_Unhovered_then_Dehighlighted -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="afterMethod" is-config="true" duration-ms="3391" started-at="2018-02-19T19:04:20Z" finished-at="2018-02-19T19:04:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="given_AboutLogoButton_when_Hovered_then_Highlighted()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="given_AboutLogoButton_when_Hovered_then_Highlighted" duration-ms="2783" started-at="2018-02-19T19:04:23Z" finished-at="2018-02-19T19:04:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- given_AboutLogoButton_when_Hovered_then_Highlighted -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="afterMethod" is-config="true" duration-ms="2739" started-at="2018-02-19T19:04:26Z" finished-at="2018-02-19T19:04:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="given_AboutLogoButton_when_Unhovered_then_Dehighlighted()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="given_AboutLogoButton_when_Unhovered_then_Dehighlighted" duration-ms="1931" started-at="2018-02-19T19:04:29Z" finished-at="2018-02-19T19:04:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- given_AboutLogoButton_when_Unhovered_then_Dehighlighted -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="afterMethod" is-config="true" duration-ms="2891" started-at="2018-02-19T19:04:31Z" finished-at="2018-02-19T19:04:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="given_AboutPage_when_Loaded_then_AboutPageIsLoaded()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="given_AboutPage_when_Loaded_then_AboutPageIsLoaded" duration-ms="892" started-at="2018-02-19T19:04:34Z" finished-at="2018-02-19T19:04:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- given_AboutPage_when_Loaded_then_AboutPageIsLoaded -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="afterMethod" is-config="true" duration-ms="2870" started-at="2018-02-19T19:04:35Z" finished-at="2018-02-19T19:04:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="given_AboutPage_when_Loaded_then_PageBackgroundIsDisplayed()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="given_AboutPage_when_Loaded_then_PageBackgroundIsDisplayed" duration-ms="2812" started-at="2018-02-19T19:04:37Z" finished-at="2018-02-19T19:04:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- given_AboutPage_when_Loaded_then_PageBackgroundIsDisplayed -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="afterMethod" is-config="true" duration-ms="2554" started-at="2018-02-19T19:04:40Z" finished-at="2018-02-19T19:04:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="tearDown" is-config="true" duration-ms="565" started-at="2018-02-19T19:04:43Z" finished-at="2018-02-19T19:04:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

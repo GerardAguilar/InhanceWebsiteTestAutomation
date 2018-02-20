@@ -89,6 +89,7 @@ public class InhanceWebsiteAboutPageTest {
 	String hamburgerXPath;
 	String aboutXPath;
 	String logoXPath;
+	String xButtonXPath;
 
 	InhanceWebsiteAboutPageTest(){
 		//TODO will have to make these global field values externally input-able
@@ -122,7 +123,7 @@ public class InhanceWebsiteAboutPageTest {
 		hamburgerButtonHighlighted = "1518561729060.png";
 		aboutHamburgerButtonHighlighted = "1519089955933.png";
 		aboutHamburgerButtonDehighlighted = "1519089770236.png";
-		hamburgerMenu = "1518562267173.png";
+		hamburgerMenu = "1518562267173.png";//"1518138775741.png";
 		hamburgerMenuWorkHighlight = "1518562816908.png";
 		hamburgerMenuAboutHighlight = "1518562807915.png";
 		hamburgerMenuNewsHighlight = "1518562824643.png";
@@ -139,6 +140,7 @@ public class InhanceWebsiteAboutPageTest {
 		hamburgerXPath = "//div[@class='cross']";
 		aboutXPath = "//div[@section='about']";
 		logoXPath = "//div[@id='logo']";
+		xButtonXPath = "//div[@class='cross']";
 		
 //		//replaces Wait
 //		//copy the entirety of it and replace xpathExpression
@@ -198,54 +200,65 @@ public class InhanceWebsiteAboutPageTest {
 //	
 //		}
 	
-//	@Test 
-//	protected void given_AboutPage_when_Loaded_then_AboutPageIsLoaded() {
-//		clickButton(hamburgerXPath);
-//		clickButton(aboutXPath);
-//		checkAddressOfPage(aboutPageAddress);
-//	}	
-//	@Test 
-//	protected void given_AboutPage_when_Loaded_then_PageBackgroundIsDisplayed(){
-//		clickButton(hamburgerXPath);
-//		clickButton(aboutXPath);
-//		checkAddressOfPage(aboutPageAddress);
-//		checkPageBackgroundIsDisplayed(aboutBackground);	
-//	}
-//	
-//	@Test 
-//	protected void given_AboutLogoButton_when_Hovered_then_Highlighted(){
-//		clickButton(hamburgerXPath);
-//		clickButton(aboutXPath);
-//		checkHighlightWhenHoveredOverOfElement(logoXPath, logoButtonAboutHighlighted);
-//	}
-//	@Test 
-//	protected void given_AboutLogoButton_when_Unhovered_then_Dehighlighted(){
-//		clickButton(hamburgerXPath);
-//		clickButton(aboutXPath);
-//		checkDehighlightWhenNoLongerHoveredOverOfElement(logoXPath, logoButtonAboutHighlighted, logoButtonAboutDehighlighted);
-//	}	
-//	@Test 
-//	protected void given_AboutHamburgerButton_when_Hovered_then_Highlighted(){
-//		clickButton(hamburgerXPath);
-//		clickButton(aboutXPath);
-//		checkHighlightWhenHoveredOverOfElement(hamburgerXPath, aboutHamburgerButtonHighlighted);
-//	}
-//	@Test 
-//	protected void given_AboutHamburgerButton_when_Unhovered_then_Dehighlighted(){
-//		clickButton(hamburgerXPath);
-//		clickButton(aboutXPath);
-//		checkDehighlightWhenNoLongerHoveredOverOfElement(hamburgerXPath, aboutHamburgerButtonHighlighted,aboutHamburgerButtonDehighlighted);
-//	}
+	@Test 
+	protected void given_AboutPage_when_Loaded_then_AboutPageIsLoaded() {
+		clickButton(hamburgerXPath);
+		clickButton(aboutXPath);
+		checkAddressOfPage(aboutPageAddress);
+		checkAddressOfPage(aboutPageAddress);
+	}	
+	@Test 
+	protected void given_AboutPage_when_Loaded_then_PageBackgroundIsDisplayed(){
+		clickButton(hamburgerXPath);
+		clickButton(aboutXPath);
+		checkAddressOfPage(aboutPageAddress);
+		checkPageBackgroundIsDisplayed(aboutBackground);	
+	}
+	
+	@Test 
+	protected void given_AboutLogoButton_when_Hovered_then_Highlighted(){
+		clickButton(hamburgerXPath);
+		clickButton(aboutXPath);
+		checkAddressOfPage(aboutPageAddress);
+		checkHighlightWhenHoveredOverOfElement(logoXPath, logoButtonAboutHighlighted);
+	}
+	@Test 
+	protected void given_AboutLogoButton_when_Unhovered_then_Dehighlighted(){
+		clickButton(hamburgerXPath);
+		clickButton(aboutXPath);
+		checkAddressOfPage(aboutPageAddress);
+		checkDehighlightWhenNoLongerHoveredOverOfElement(logoXPath, logoButtonAboutHighlighted, logoButtonAboutDehighlighted);
+	}	
+	@Test 
+	protected void given_AboutHamburgerButton_when_Hovered_then_Highlighted(){
+		clickButton(hamburgerXPath);
+		clickButton(aboutXPath);
+		checkAddressOfPage(aboutPageAddress);
+		checkHighlightWhenHoveredOverOfElement(hamburgerXPath, aboutHamburgerButtonHighlighted);
+	}
+	@Test 
+	protected void given_AboutHamburgerButton_when_Unhovered_then_Dehighlighted(){
+		clickButton(hamburgerXPath);
+		clickButton(aboutXPath);
+		checkAddressOfPage(aboutPageAddress);
+		checkDehighlightWhenNoLongerHoveredOverOfElement(hamburgerXPath, aboutHamburgerButtonHighlighted,aboutHamburgerButtonDehighlighted);
+	}
 	@Test 
 	protected void given_AboutHamburgerButton_when_Pressed_then_MenuIsDisplayed(){
 		clickButton(hamburgerXPath);
 		clickButton(aboutXPath);
-		checkPageBackgroundIsDisplayed(hamburgerMenu);
+		checkAddressOfPage(aboutPageAddress);
+		clickButton(hamburgerXPath);
+		checkPageImageIsDisplayed(hamburgerMenu);//this should have failed
 	}
-	@Test 
-	protected void given_AboutHamburgerButtonXSelection_when_Action_then_Result(){
-		
-	}
+//	@Test 
+//	protected void given_AboutHamburgerButtonXSelection_when_Pressed_then_MenuDisappears(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		clickButton(hamburgerXPath);
+//		clickButton(xButtonXPath);
+//		checkPageBackgroundIsNotVisible(hamburgerMenu);
+//	}
 //	@Test protected void given_AboutHamburgerButtonWorkSelection_when_Action_then_Result(){}
 //	@Test protected void given_AboutHamburgerButtonAboutSelection_when_Action_then_Result(){}
 //	@Test protected void given_AboutHamburgerButtonNewsSelection_when_Action_then_Result(){}
@@ -285,7 +298,7 @@ public class InhanceWebsiteAboutPageTest {
 			    .pollingEvery(1, TimeUnit.SECONDS)
 			    .ignoring(NoSuchElementException.class);
 
-		Boolean foo = wait.until(new Function<JavascriptExecutor, Boolean>() 
+		wait.until(new Function<JavascriptExecutor, Boolean>() 
 		{
 			public Boolean apply(JavascriptExecutor executor) {
 				if(getPageYOffset()==0) {
@@ -511,7 +524,7 @@ public class InhanceWebsiteAboutPageTest {
 		};
 		fluentWaitForElementDehighlight.until(isElementDehighlighted);
 	}
-	protected void checkPageBackgroundIsDisplayed(final String backgroundSrc) {		
+	protected void checkPageBackgroundIsDisplayed(String backgroundSrc) {		
 		//define fluent wait
 		FluentWait<String> fluentWaitForBackground;
 		fluentWaitForBackground = new FluentWait<String>(backgroundSrc);
@@ -530,7 +543,47 @@ public class InhanceWebsiteAboutPageTest {
 			}
 		};
 		fluentWaitForBackground.until(isBackgroundDisplayed);
-		
+	}
+	protected void checkPageImageIsDisplayed(String imageSrc) {		
+		//define fluent wait
+		FluentWait<String> fluentWaitForBackground;
+		fluentWaitForBackground = new FluentWait<String>(imageSrc);
+		fluentWaitForBackground.withTimeout(6000, TimeUnit.MILLISECONDS);
+		fluentWaitForBackground.pollingEvery(250, TimeUnit.MILLISECONDS);
+		fluentWaitForBackground.ignoring(NoSuchElementException.class);
+		Function<String, Boolean> isBackgroundDisplayed = new Function<String,Boolean>(){
+			public Boolean apply(String imageSrcCopy) {
+				//TODO - Region needs to be parameterized - allows for less false positives
+				Region r = Region.create(1500,0,420,1200);
+				if(r.exists(imageSrcCopy)!=null) {
+					return true;
+				}
+				//the screenshots aren't called every 250 milliseconds. It gets called once the fluentwait times out
+				takeScreenshot();
+				return false;
+			}
+		};
+		fluentWaitForBackground.until(isBackgroundDisplayed);
+	}
+	protected void checkPageBackgroundIsNotVisible(String backgroundSrc) {
+		//define fluent wait
+		FluentWait<String> fluentWaitForBackground;
+		fluentWaitForBackground = new FluentWait<String>(backgroundSrc);
+		fluentWaitForBackground.withTimeout(2500, TimeUnit.MILLISECONDS);
+		fluentWaitForBackground.pollingEvery(250, TimeUnit.MILLISECONDS);
+		fluentWaitForBackground.ignoring(NoSuchElementException.class);
+		Function<String, Boolean> isBackgroundNotVisible = new Function<String,Boolean>(){
+			public Boolean apply(String backgroundSrcCopy) {
+				//s.exists is what checks if the background stored is properly showing on the site
+				if(!(s.exists(backgroundSrcCopy)!=null)) {
+					return true;
+				}
+				//the screenshots aren't called every 250 milliseconds. It gets called once the fluentwait times out
+				takeScreenshot();
+				return false;
+			}
+		};
+		fluentWaitForBackground.until(isBackgroundNotVisible);
 	}
 	
 	protected void clickBackButton() {

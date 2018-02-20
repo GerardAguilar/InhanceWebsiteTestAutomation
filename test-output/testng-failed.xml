@@ -8,8 +8,7 @@
           <include name="setUp"/>
           <include name="afterMethod"/>
           <include name="tearDown"/>
-          <include name="given_AboutHamburgerButton_when_Unhovered_then_Dehighlighted"/>
-          <include name="given_AboutHamburgerButton_when_Hovered_then_Dehighlighted"/>
+          <include name="given_AboutHamburgerButton_when_Pressed_then_MenuIsDisplayed"/>
         </methods>
       </class> <!-- com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest -->
     </classes>

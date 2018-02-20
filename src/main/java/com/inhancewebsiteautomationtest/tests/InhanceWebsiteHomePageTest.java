@@ -1499,6 +1499,7 @@ public class InhanceWebsiteHomePageTest {
 	}
 	@AfterMethod
 	public void afterMethod() {
+//		s.highlight();
 		driver.get(baseUrl);
 	}
 
