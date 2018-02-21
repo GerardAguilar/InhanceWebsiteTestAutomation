@@ -3,14 +3,15 @@
 <suite name="Failed suite [Command line suite]">
   <test name="Command line test(failed)">
     <classes>
-      <class name="com.inhancewebsiteautomationtest.tests.InhanceWebsiteIndependentTests">
+      <class name="com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest">
         <methods>
-          <include name="tearDown"/>
           <include name="setUp"/>
           <include name="afterMethod"/>
-          <include name="given_PageIsSecondPartOfHome_when_ThirdImageOfGalleryIsClicked_then_PageIsNavigatedToDellKeynote"/>
+          <include name="given_AboutAerospaceLink_when_Clicked_then_AerospacePageIsLoaded"/>
+          <include name="tearDown"/>
+          <include name="given_AboutAerospaceLink_when_Unhovered_then_Animate"/>
         </methods>
-      </class> <!-- com.inhancewebsiteautomationtest.tests.InhanceWebsiteIndependentTests -->
+      </class> <!-- com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest -->
     </classes>
   </test> <!-- Command line test(failed) -->
 </suite> <!-- Failed suite [Command line suite] -->

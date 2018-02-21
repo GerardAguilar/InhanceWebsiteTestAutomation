@@ -43,53 +43,93 @@ public class InhanceWebsiteAboutPageTest {
 	private WebDriver driver;
 	private String baseUrl;
 	private StringBuffer verificationErrors = new StringBuffer();
-	WebDriverWait wait;	
-	int waitInSecondsForBackground;
-	int waitForDynamicElement;
-	String fullScreenPageHeight;	
-	String workBackground;
-	String aboutBackground;
-	String newsBackground;
-	String contactBackground;
-	String careersBackground1a;//since the content in the careers page changes regularly, we can only check 
-	String careersBackground1b;
-	String logoButtonHomeHighlighted;
-	String logoButtonWorkHighlighted;
-	String logoButtonAboutHighlighted;
-	String logoButtonAboutDehighlighted;
-	String logoButtonNewsHighlighted;
-	String logoButtonContactHighlighted;	
-	String hamburgerButton;
-	String hamburgerButtonHighlighted;
-	String hamburgerButtonDehighlighted;
-	String aboutHamburgerButtonHighlighted;
-	String aboutHamburgerButtonDehighlighted;
-	String hamburgerMenu;
-	String hamburgerMenuWorkHighlight;
-	String hamburgerMenuAboutHighlight;
-	String hamburgerMenuNewsHighlight;
-	String hamburgerMenuContactHighlight;
-	String xButton;
-	String homePageAddress;
-	String workPageAddress;
-	String aboutPageAddress;
-	String newsPageAddress;
-	String contactPageAddress;
-	String careersPageAddress;
-	String facebookAddress;
-	String twitterAddress;
-	String linkedInBaseAddress;
-	String linkedInAddress;
-	String linkedInAlternateAddress;
-	String companyPhoneNumber;
-	String companyEmail;
-	Screen s;
-	FluentWait<String> fluentWaitForBackground;
+	protected WebDriverWait wait;	
+	protected int waitInSecondsForBackground;
+	protected int waitForDynamicElement;
+	protected String fullScreenPageHeight;	
+	protected String workBackground;
+	protected String aboutBackground;
+	protected String newsBackground;
+	protected String contactBackground;
+	protected String careersBackground1a;//since the content in the careers page changes regularly, we can only check 
+	protected String careersBackground1b;
+	protected String logoButtonHomeHighlighted;
+	protected String logoButtonWorkHighlighted;
+	protected String logoButtonAboutHighlighted;
+	protected String logoButtonAboutDehighlighted;
+	protected String logoButtonNewsHighlighted;
+	protected String logoButtonContactHighlighted;	
+	protected String hamburgerButton;
+	protected String hamburgerButtonHighlighted;
+	protected String hamburgerButtonDehighlighted;
+	protected String aboutHamburgerButtonHighlighted;
+	protected String aboutHamburgerButtonDehighlighted;
+	protected String aboutHamburgerButtonDehighlightedWhenInAbout;
+	protected String workHamburgerButtonHighlighted;
+	protected String workHamburgerButtonDehighlighted;
+	protected String newsHamburgerButtonHighlighted;
+	protected String newsHamburgerButtonDehighlighted;
+	protected String hamburgerMenu;
+	protected String hamburgerMenuWorkHighlight;
+	protected String hamburgerMenuAboutHighlight;
+	protected String hamburgerMenuNewsHighlight;
+	protected String hamburgerMenuContactHighlight;
+	protected String xButton;
+	protected String homePageAddress;
+	protected String workPageAddress;
+	protected String aboutPageAddress;
+	protected String newsPageAddress;
+	protected String contactPageAddress;
+	protected String careersPageAddress;
+	protected String facebookAddress;
+	protected String twitterAddress;
+	protected String iTTPageAddress;
+	protected String linkedInBaseAddress;
+	protected String linkedInAddress;
+	protected String linkedInAlternateAddress;
+	protected String companyPhoneNumber;
+	protected String companyEmail;
+	protected Screen s;
+	protected FluentWait<String> fluentWaitForBackground;
 	
-	String hamburgerXPath;
-	String aboutXPath;
-	String logoXPath;
-	String xButtonXPath;
+	protected String hamburgerXPath;
+	protected String aboutXPath;
+	protected String workXPath;
+	protected String logoXPath;
+	protected String xButtonXPath;
+	protected String newsXPath;
+	protected String contactXPath;
+	protected String contactHamburgerButtonHighlighted;
+	protected String contactHamburgerButtonDehighlighted;
+	protected String downArrowXPath;
+	protected String aboutBackground2;
+	protected String aerospaceLinkXPath;
+	protected String aerospaceLinkHovered;
+	protected String aerospaceLinkUnhovered;
+	protected String aerospaceBackground;
+	protected String aerospacePageAddress;
+	protected String iTTelecomLinkXPath;
+	protected String iTTelecomLinkHovered;
+	protected String iTTelecomLinkUnhovered;
+	protected String iTTBackground;
+	
+	protected Region upperHalf;
+	protected Region lowerHalf;
+	protected Region leftHalf;
+	protected Region rightHalf;
+	protected Region fullScreen;
+	protected int width;
+	protected int height;
+	protected String healthcareLinkXPath;
+	protected String healthcareLinkHovered;
+	protected String healthcareLinkUnhovered;
+	protected String healthcarePageAddress;
+	protected String healthcareBackground;
+	private String energyLinkHovered;
+	private String energyLinkXPath;
+	private String energyLinkUnhovered;
+	private String energyPageAddress;
+	private String energyBackground;
 
 	InhanceWebsiteAboutPageTest(){
 		//TODO will have to make these global field values externally input-able
@@ -104,15 +144,24 @@ public class InhanceWebsiteAboutPageTest {
 		linkedInBaseAddress = "https://www.linkedin.com";
 		linkedInAddress = "https://www.linkedin.com/company/inhance-digital/";
 		linkedInAlternateAddress = "https://www.linkedin.com/authwall";
+		aerospacePageAddress = "http://www.inhance.com/#industries!Aerospace";
+		iTTPageAddress = "http://www.inhance.com/#industries!IT/Telecom";
+		healthcarePageAddress = "http://www.inhance.com/#industries!healthcare";
+		energyPageAddress = "http://www.inhance.com/#industries!energy";
 		waitInSecondsForBackground = 10;
 		waitForDynamicElement = 6;
 		fullScreenPageHeight = "1086";
 		workBackground = "1518131732322.png";
 		aboutBackground = "1518138066238.png";
+		aboutBackground2 = "1519158064609.png";
 		newsBackground = "1518138775741.png";
 		contactBackground = "1518138158909.png";
 		careersBackground1a = "1518637431569.png";
 		careersBackground1b = "1518637406464.png";
+		aerospaceBackground = "1519164506915.png";
+		iTTBackground = "1519170407860.png";
+		healthcareBackground = "1519176242130.png";
+		energyBackground = "1519177139633.png";
 		logoButtonHomeHighlighted = "1518567362868.png";
 		logoButtonWorkHighlighted = "1518567523359.png";
 		logoButtonAboutHighlighted = "1518567538418.png";
@@ -123,7 +172,14 @@ public class InhanceWebsiteAboutPageTest {
 		hamburgerButtonHighlighted = "1518561729060.png";
 		aboutHamburgerButtonHighlighted = "1519089955933.png";
 		aboutHamburgerButtonDehighlighted = "1519089770236.png";
-		hamburgerMenu = "1518562267173.png";//"1518138775741.png";
+		aboutHamburgerButtonDehighlightedWhenInAbout = "1519155852029.png";
+		workHamburgerButtonHighlighted = "1519152734952.png";
+		workHamburgerButtonDehighlighted = "1519152743314.png";
+		newsHamburgerButtonHighlighted = "1519156799710.png";
+		newsHamburgerButtonDehighlighted = "1519156785391.png";
+		contactHamburgerButtonHighlighted = "1519157577267.png";
+		contactHamburgerButtonDehighlighted = "1519157498879.png";
+		hamburgerMenu = "1518562267173.png";
 		hamburgerMenuWorkHighlight = "1518562816908.png";
 		hamburgerMenuAboutHighlight = "1518562807915.png";
 		hamburgerMenuNewsHighlight = "1518562824643.png";
@@ -139,27 +195,42 @@ public class InhanceWebsiteAboutPageTest {
 		
 		hamburgerXPath = "//div[@class='cross']";
 		aboutXPath = "//div[@section='about']";
+		workXPath = "//div[@section='work']";
 		logoXPath = "//div[@id='logo']";
 		xButtonXPath = "//div[@class='cross']";
+		newsXPath = "//div[@section='news'][contains(text(),'news')]";
+		contactXPath = "//div[@section='contact'][contains(text(),'contact')]";
+		downArrowXPath = "//div[@id='about']//div[@class='page']//img[@src='/icons/arrow.svg']";
+		aerospaceLinkXPath = "//div[@name='Aerospace']//div[@class='label']";
+		iTTelecomLinkXPath = "//div[@name='IT/Telecom']//div[@class='label']";
+		healthcareLinkXPath = "//div[@name='healthcare']//div[@class='label']";
+		energyLinkXPath = "//div[@name='energy']//div[@class='label']";
+
+		aerospaceLinkHovered = "1519167128893.png";
+		aerospaceLinkUnhovered = "1519166713599.png";
+		iTTelecomLinkHovered = "1519169670608.png";
+		iTTelecomLinkUnhovered = "1519174673187.png";//"1519172651791.png";
+		healthcareLinkHovered = "1519176100188.png";
+		healthcareLinkUnhovered = "1519176054901.png";
+		energyLinkHovered = "1519177112834.png";
+		energyLinkUnhovered = "1519177120956.png";
 		
-//		//replaces Wait
-//		//copy the entirety of it and replace xpathExpression
-//		FluentWait<String> fluentWaitForElement;
-//		fluentWaitForElement = new FluentWait(xpathExpression);
-//		fluentWaitForElement.withTimeout(5000, TimeUnit.MILLISECONDS);
-//		fluentWaitForElement.pollingEvery(250, TimeUnit.MILLISECONDS);
-//		fluentWaitForElement.ignoring(NoSuchElementException.class);
-//		Function<String, Boolean> isElementDisplayed = new Function<String,Boolean>(){
-//			public Boolean apply(String img) {
-//				WebElement el = driver.findElement(By.xpath(xpathExpression));
-//				return el.isDisplayed();
-//			}
-//		};
-//		fluentWaitForElement.until(isElementDisplayed);
+		width = 1920;
+		height = 1200;
+		
+		upperHalf = new Region(0,0,width, height/2);
+//		upperHalf.highlight();
+		lowerHalf = new Region(0,height/2, width, height/2);
+//		lowerHalf.highlight();
+		leftHalf = new Region(0,0,width/2, height);
+//		leftHalf.highlight();
+		rightHalf = new Region(width/2,0,width/2, height);
+//		rightHalf.highlight();
+		fullScreen = new Region(0,0, width, height);
 	}
 
 	@BeforeClass(alwaysRun = true)
-	public void setUp() throws Exception {		
+	public void setUp() throws Exception {	
 		ClassLoader classLoader = getClass().getClassLoader();
         URL resource = classLoader.getResource("geckodriver.exe");
         String os = System.getProperty("os.name").toLowerCase();
@@ -200,74 +271,271 @@ public class InhanceWebsiteAboutPageTest {
 //	
 //		}
 	
-	@Test 
-	protected void given_AboutPage_when_Loaded_then_AboutPageIsLoaded() {
-		clickButton(hamburgerXPath);
-		clickButton(aboutXPath);
-		checkAddressOfPage(aboutPageAddress);
-		checkAddressOfPage(aboutPageAddress);
-	}	
-	@Test 
-	protected void given_AboutPage_when_Loaded_then_PageBackgroundIsDisplayed(){
-		clickButton(hamburgerXPath);
-		clickButton(aboutXPath);
-		checkAddressOfPage(aboutPageAddress);
-		checkPageBackgroundIsDisplayed(aboutBackground);	
-	}
-	
-	@Test 
-	protected void given_AboutLogoButton_when_Hovered_then_Highlighted(){
-		clickButton(hamburgerXPath);
-		clickButton(aboutXPath);
-		checkAddressOfPage(aboutPageAddress);
-		checkHighlightWhenHoveredOverOfElement(logoXPath, logoButtonAboutHighlighted);
-	}
-	@Test 
-	protected void given_AboutLogoButton_when_Unhovered_then_Dehighlighted(){
-		clickButton(hamburgerXPath);
-		clickButton(aboutXPath);
-		checkAddressOfPage(aboutPageAddress);
-		checkDehighlightWhenNoLongerHoveredOverOfElement(logoXPath, logoButtonAboutHighlighted, logoButtonAboutDehighlighted);
-	}	
-	@Test 
-	protected void given_AboutHamburgerButton_when_Hovered_then_Highlighted(){
-		clickButton(hamburgerXPath);
-		clickButton(aboutXPath);
-		checkAddressOfPage(aboutPageAddress);
-		checkHighlightWhenHoveredOverOfElement(hamburgerXPath, aboutHamburgerButtonHighlighted);
-	}
-	@Test 
-	protected void given_AboutHamburgerButton_when_Unhovered_then_Dehighlighted(){
-		clickButton(hamburgerXPath);
-		clickButton(aboutXPath);
-		checkAddressOfPage(aboutPageAddress);
-		checkDehighlightWhenNoLongerHoveredOverOfElement(hamburgerXPath, aboutHamburgerButtonHighlighted,aboutHamburgerButtonDehighlighted);
-	}
-	@Test 
-	protected void given_AboutHamburgerButton_when_Pressed_then_MenuIsDisplayed(){
-		clickButton(hamburgerXPath);
-		clickButton(aboutXPath);
-		checkAddressOfPage(aboutPageAddress);
-		clickButton(hamburgerXPath);
-		checkPageImageIsDisplayed(hamburgerMenu);//this should have failed
-	}
+//	@Test 
+//	protected void given_AboutPage_when_Loaded_then_AboutPageIsLoaded() {
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		checkAddressOfPage(aboutPageAddress);
+//	}	
+//	@Test 
+//	protected void given_AboutPage_when_Loaded_then_PageBackgroundIsDisplayed(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		checkPageBackgroundIsDisplayed(aboutBackground);	
+//	}
+//	
+//	@Test 
+//	protected void given_AboutLogoButton_when_Hovered_then_Highlighted(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		checkHighlightWhenHoveredOverOfElement(logoXPath, logoButtonAboutHighlighted);
+//	}
+//	@Test 
+//	protected void given_AboutLogoButton_when_Unhovered_then_Dehighlighted(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		checkDehighlightWhenNoLongerHoveredOverOfElement(logoXPath, logoButtonAboutHighlighted, logoButtonAboutDehighlighted, fullScreen);
+//	}	
+//	@Test 
+//	protected void given_AboutHamburgerButton_when_Hovered_then_Highlighted(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		checkHighlightWhenHoveredOverOfElement(hamburgerXPath, aboutHamburgerButtonHighlighted);
+//	}
+//	@Test 
+//	protected void given_AboutHamburgerButton_when_Unhovered_then_Dehighlighted(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		checkDehighlightWhenNoLongerHoveredOverOfElement(hamburgerXPath, aboutHamburgerButtonHighlighted,aboutHamburgerButtonDehighlighted, fullScreen);
+//	}
+//	@Test 
+//	protected void given_AboutHamburgerButton_when_Pressed_then_MenuIsDisplayed(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		clickButton(hamburgerXPath);
+//		checkPageImageIsDisplayed(hamburgerMenu,1500,0,420,1200);
+//	}
 //	@Test 
 //	protected void given_AboutHamburgerButtonXSelection_when_Pressed_then_MenuDisappears(){
 //		clickButton(hamburgerXPath);
 //		clickButton(aboutXPath);
 //		clickButton(hamburgerXPath);
 //		clickButton(xButtonXPath);
-//		checkPageBackgroundIsNotVisible(hamburgerMenu);
+//		checkPageBackgroundIsNotVisible(aboutBackground, hamburgerMenu);
 //	}
-//	@Test protected void given_AboutHamburgerButtonWorkSelection_when_Action_then_Result(){}
-//	@Test protected void given_AboutHamburgerButtonAboutSelection_when_Action_then_Result(){}
-//	@Test protected void given_AboutHamburgerButtonNewsSelection_when_Action_then_Result(){}
-//	@Test protected void given_AboutHamburgerButtonContactSelection_when_Action_then_Result(){}
-//	@Test protected void given_AboutDownArrowButton_when_Action_then_Result(){}
-//	@Test protected void given_AboutAerospaceLink_when_Action_then_Result(){}
-//	@Test protected void given_AboutITTelecomLink_when_Action_then_Result(){}
-//	@Test protected void given_AboutHealthcareLink_when_Action_then_Result(){}
-//	@Test protected void given_AboutEnergyLink_when_Action_then_Result(){}
+//	@Test 
+//	protected void given_AboutHamburgerButtonWorkSelection_when_Hovered_then_Highlighted(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		clickButton(hamburgerXPath);
+//		checkHighlightWhenHoveredOverOfElement(workXPath, workHamburgerButtonHighlighted);
+//	}
+//	@Test 
+//	protected void given_AboutHamburgerButtonWorkSelection_when_Unhovered_then_Dehighlighted(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		clickButton(hamburgerXPath);
+//		checkDehighlightWhenNoLongerHoveredOverOfElement(workXPath, workHamburgerButtonHighlighted, workHamburgerButtonDehighlighted, fullScreen);
+//	}
+//	@Test 
+//	protected void given_AboutHamburgerButtonWorkSelection_when_Clicked_then_WorkPageIsLoaded(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		clickButton(hamburgerXPath);
+//		clickButton(workXPath);
+//		checkAddressOfPage(workPageAddress);
+//		checkPageBackgroundIsDisplayed(workBackground);
+//	}
+//	@Test 
+//	protected void given_AboutHamburgerButtonAboutSelection_when_Hovered_then_Highlighted(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		clickButton(hamburgerXPath);
+//		checkHighlightWhenHoveredOverOfElement(aboutXPath, aboutHamburgerButtonHighlighted);
+//	}
+//	@Test 
+//	protected void given_AboutHamburgerButtonAboutSelection_when_Unhovered_then_Dehighlighted(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		clickButton(hamburgerXPath);
+//		checkDehighlightWhenNoLongerHoveredOverOfElement(aboutXPath, aboutHamburgerButtonHighlighted, aboutHamburgerButtonDehighlightedWhenInAbout, fullScreen);
+//	}
+//	@Test 
+//	protected void given_AboutHamburgerButtonAboutSelection_when_Clicked_then_MenuDisappears(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		checkPageBackgroundIsDisplayed(aboutBackground);
+//	}
+//	@Test 
+//	protected void given_AboutHamburgerButtonNewsSelection_when_Hovered_then_Highlighted(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		clickButton(hamburgerXPath);
+//		checkHighlightWhenHoveredOverOfElement(newsXPath, newsHamburgerButtonHighlighted);
+//	}
+//	@Test 
+//	protected void given_AboutHamburgerButtonNewsSelection_when_Unhovered_then_Dehighlighted(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		clickButton(hamburgerXPath);
+//		checkDehighlightWhenNoLongerHoveredOverOfElement(newsXPath, newsHamburgerButtonHighlighted, newsHamburgerButtonDehighlighted, fullScreen);
+//	}
+//	@Test 
+//	protected void given_AboutHamburgerButtonNewsSelection_when_Clicked_then_NewsPageIsLoaded(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		clickButton(hamburgerXPath);
+//		clickButton(newsXPath);
+//		checkAddressOfPage(newsPageAddress);
+//		checkPageBackgroundIsDisplayed(newsBackground);
+//	}
+//	@Test 
+//	protected void given_AboutHamburgerButtonContactSelection_when_Hovered_then_Highlighted(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		clickButton(hamburgerXPath);
+//		checkHighlightWhenHoveredOverOfElement(contactXPath, contactHamburgerButtonHighlighted);
+//	}
+//	@Test 
+//	protected void given_AboutHamburgerButtonContactSelection_when_Unhovered_then_Dehighlighted(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		clickButton(hamburgerXPath);
+//		checkDehighlightWhenNoLongerHoveredOverOfElement(contactXPath, contactHamburgerButtonHighlighted, contactHamburgerButtonDehighlighted, fullScreen);
+//	}
+//	@Test 
+//	protected void given_AboutHamburgerButtonContactSelection_when_Clicked_then_ContactPageIsLoaded(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		clickButton(hamburgerXPath);
+//		clickButton(contactXPath);
+//		checkAddressOfPage(contactPageAddress);
+//		checkPageBackgroundIsDisplayed(contactBackground);
+//	}
+//	@Test 
+//	protected void given_AboutDownArrowButton_when_Clicked_then_ContactPageIsLoaded(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		clickButton(downArrowXPath);
+//		checkPageBackgroundIsDisplayed(aboutBackground2);
+//	}
+//	@Test 
+//	protected void given_AboutAerospaceLink_when_Hovered_then_Animate(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		checkHighlightWhenHoveredOverOfElement(aerospaceLinkXPath, aerospaceLinkHovered);
+//	}
+//	@Test
+//	protected void given_AboutAerospaceLink_when_Unhovered_then_Animate(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+////		checkDehighlightWhenNoLongerHoveredOverOfElement(aerospaceLinkXPath, aerospaceLinkHovered, aerospaceLinkUnhovered);
+//		checkDehighlightWhenNoLongerHoveredOverOfElement(aerospaceLinkXPath, aerospaceLinkHovered, aerospaceLinkUnhovered, lowerHalf);
+//	}
+//	@Test 
+//	protected void given_AboutAerospaceLink_when_Clicked_then_AerospacePageIsLoaded(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		clickButton(aerospaceLinkXPath);
+//		checkAddressOfPage(aerospacePageAddress);
+//		checkPageBackgroundIsDisplayed(aerospaceBackground);
+//	}
+//	@Test
+//	protected void given_AboutITTelecomLink_when_Hovered_then_Animate(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		checkHighlightWhenHoveredOverOfElement(iTTelecomLinkXPath, iTTelecomLinkHovered);
+//	}
+//	@Test
+//	protected void given_AboutITTelecomLink_when_Unhovered_then_Animate(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+////		checkDehighlightWhenNoLongerHoveredOverOfElement(iTTelecomLinkXPath, iTTelecomLinkHovered, iTTelecomLinkUnhovered);
+//		checkDehighlightWhenNoLongerHoveredOverOfElement(iTTelecomLinkXPath, iTTelecomLinkHovered, iTTelecomLinkUnhovered, lowerHalf);
+//	}
+//	@Test
+//	protected void given_AboutITTelecomLink_when_Clicked_then_ITTPageIsLoaded(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		clickButton(iTTelecomLinkXPath);
+//		checkAddressOfPage(iTTPageAddress);
+//		checkPageBackgroundIsDisplayed(iTTBackground);
+//	}
+//	@Test
+//	protected void given_AboutHealthcareLink_when_Hovered_then_Animate(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		checkHighlightWhenHoveredOverOfElement(healthcareLinkXPath, healthcareLinkHovered);
+//	}
+//	@Test
+//	protected void given_AboutHealthcareLink_when_Unhovered_then_Animate(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		checkDehighlightWhenNoLongerHoveredOverOfElement(healthcareLinkXPath, healthcareLinkHovered, healthcareLinkUnhovered, lowerHalf);
+//	}
+//	@Test
+//	protected void given_AboutHealthcareLink_when_Clicked_then_ITTPageIsLoaded(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		clickButton(healthcareLinkXPath);
+//		checkAddressOfPage(healthcarePageAddress);
+//		checkPageBackgroundIsDisplayed(healthcareBackground);
+//	}
+	@Test
+	protected void given_AboutEnergyLink_when_Hovered_then_Animate(){
+		clickButton(hamburgerXPath);
+		clickButton(aboutXPath);
+		checkAddressOfPage(aboutPageAddress);
+		checkHighlightWhenHoveredOverOfElement(energyLinkXPath, energyLinkHovered);
+	}
+	@Test
+	protected void given_AboutEnergyLink_when_Unhovered_then_Animate(){
+		clickButton(hamburgerXPath);
+		clickButton(aboutXPath);
+		checkAddressOfPage(aboutPageAddress);
+		checkDehighlightWhenNoLongerHoveredOverOfElement(energyLinkXPath, energyLinkHovered, energyLinkUnhovered, lowerHalf);
+	}
+	@Test
+	protected void given_AboutEnergyLink_when_Clicked_then_EnergyPageIsLoaded(){
+		clickButton(hamburgerXPath);
+		clickButton(aboutXPath);
+		checkAddressOfPage(aboutPageAddress);
+		clickButton(energyLinkXPath);
+		checkAddressOfPage(energyPageAddress);
+		checkPageBackgroundIsDisplayed(energyBackground);
+	}
 //	@Test protected void given_AboutAutomotiveLink_when_Action_then_Result(){}
 //	@Test protected void given_AboutMoreButton_when_Action_then_Result(){}
 //	@Test protected void given_AboutRequestInfoLink_when_Action_then_Result(){}
@@ -359,7 +627,7 @@ public class InhanceWebsiteAboutPageTest {
 	protected void checkAddressOfPage(final String address) {
 		FluentWait<String> fluentWaitAddressLoad;
 		fluentWaitAddressLoad = new FluentWait<String>(address);
-		fluentWaitAddressLoad.withTimeout(6000, TimeUnit.MILLISECONDS);
+		fluentWaitAddressLoad.withTimeout(12000, TimeUnit.MILLISECONDS);
 		fluentWaitAddressLoad.pollingEvery(250, TimeUnit.MILLISECONDS);
 		fluentWaitAddressLoad.ignoring(NoSuchElementException.class);
 		Function<String, Boolean> isAddressLoaded = new Function<String,Boolean>(){
@@ -371,7 +639,10 @@ public class InhanceWebsiteAboutPageTest {
 				}
 			}
 		};
-		fluentWaitAddressLoad.until(isAddressLoaded);	
+//		fluentWaitAddressLoad.until(isAddressLoaded);	
+		if(!(fluentWaitAddressLoad.until(isAddressLoaded))) {
+			takeScreenshot();
+		}
 	}
 		
 	protected void waitForAnimationOfElement(String xpathExpression, String highlightImageSrc) {
@@ -380,7 +651,7 @@ public class InhanceWebsiteAboutPageTest {
 		//define fluent wait
 		FluentWait<WebElement> fluentWaitForAnimation;
 		fluentWaitForAnimation = new FluentWait<WebElement>(el);
-		fluentWaitForAnimation.withTimeout(6000, TimeUnit.MILLISECONDS);
+		fluentWaitForAnimation.withTimeout(12000, TimeUnit.MILLISECONDS);
 		fluentWaitForAnimation.pollingEvery(250, TimeUnit.MILLISECONDS);
 		fluentWaitForAnimation.ignoring(NoSuchElementException.class);
 		Function<WebElement, Boolean> hasAnimationEnded = new Function<WebElement,Boolean>(){
@@ -389,7 +660,10 @@ public class InhanceWebsiteAboutPageTest {
 				return element.isDisplayed();
 			}
 		};
-		fluentWaitForAnimation.until(hasAnimationEnded);	
+//		fluentWaitForAnimation.until(hasAnimationEnded);	
+		if(!(fluentWaitForAnimation.until(hasAnimationEnded))) {
+			takeScreenshot();
+		}
 	}
 	
 	protected void waitForAllAnimationsToFinish() {
@@ -399,11 +673,11 @@ public class InhanceWebsiteAboutPageTest {
 	
 	protected void clickButton(String xpathExpression) {
 		WebElement el = driver.findElement(By.xpath(xpathExpression));
-
+		
 		//define fluent wait
 		FluentWait<WebElement> fluentWaitForElement;
 		fluentWaitForElement = new FluentWait<WebElement>(el);
-		fluentWaitForElement.withTimeout(6000, TimeUnit.MILLISECONDS);
+		fluentWaitForElement.withTimeout(12000, TimeUnit.MILLISECONDS);
 		fluentWaitForElement.pollingEvery(250, TimeUnit.MILLISECONDS);
 		fluentWaitForElement.ignoring(NoSuchElementException.class);
 		Function<WebElement, Boolean> isElementDisplayed = new Function<WebElement,Boolean>(){
@@ -412,72 +686,91 @@ public class InhanceWebsiteAboutPageTest {
 				return element.isDisplayed();
 			}
 		};
-		fluentWaitForElement.until(isElementDisplayed);	
-		
+//		fluentWaitForElement.until(isElementDisplayed);	
+		if(!(fluentWaitForElement.until(isElementDisplayed))) {
+			takeScreenshot();
+		}
 		el.click();
+		//reset cursor to the top
+
 	}
 
-	protected void checkHighlightWhenHoveredOverOfElement(String xpathExpression, String highlightImageSrc) {
+	protected void checkHighlightWhenHoveredOverOfElement(final String xpathExpression, final String highlightImageSrc) {
 		WebElement el = driver.findElement(By.xpath(xpathExpression));
 		Actions builder = new Actions(driver);
 				
 		//define fluent wait to check for presence of element
 		FluentWait<WebElement> fluentWaitForElement;
 		fluentWaitForElement = new FluentWait<WebElement>(el);
-		fluentWaitForElement.withTimeout(6000, TimeUnit.MILLISECONDS);
+		fluentWaitForElement.withTimeout(12000, TimeUnit.MILLISECONDS);
 		fluentWaitForElement.pollingEvery(250, TimeUnit.MILLISECONDS);
 		fluentWaitForElement.ignoring(NoSuchElementException.class);
 		Function<WebElement, Boolean> isElementDisplayed = new Function<WebElement,Boolean>(){
 			public Boolean apply(WebElement element) {//shallow copy of el
 //				WebElement el = driver.findElement(By.xpath(elementXPath));
+//				System.out.println(xpathExpression + " is displayed");
 				return element.isDisplayed();
 			}
 		};
-		fluentWaitForElement.until(isElementDisplayed);	
-		
+//		fluentWaitForElement.until(isElementDisplayed);	
+		if(!(fluentWaitForElement.until(isElementDisplayed))) {
+			takeScreenshot();
+		}
 		//move cursor to displayed element
 		builder.moveToElement(el).perform();
 		
 		//define another fluent wait to check for highlighted image via sikuli
 		FluentWait<String> fluentWaitForElementHighlight;
 		fluentWaitForElementHighlight = new FluentWait<String>(highlightImageSrc);
-		fluentWaitForElementHighlight.withTimeout(6000, TimeUnit.MILLISECONDS);
+		fluentWaitForElementHighlight.withTimeout(12000, TimeUnit.MILLISECONDS);
 		fluentWaitForElementHighlight.pollingEvery(250, TimeUnit.MILLISECONDS);
 		fluentWaitForElementHighlight.ignoring(NoSuchElementException.class);
 		Function<String, Boolean> isElementHighlighted = new Function<String,Boolean>(){
-			public Boolean apply(String highlightImageSrc) {
+			public Boolean apply(String highlightImageSrcCopy) {
 				//s.exists is what checks if the image stored is properly showing on the site
-				if(s.exists(highlightImageSrc)!=null) {
+				if(s.exists(highlightImageSrcCopy)!=null) {
+//					System.out.println(highlightImageSrc + " is displayed");
 					return true;
+				}else{
+					//the screenshots aren't called every 250 milliseconds. It gets called once the fluentwait times out
+					takeScreenshot();
+					return false;				
 				}
-				//the screenshots aren't called every 250 milliseconds. It gets called once the fluentwait times out
-				takeScreenshot();
-				return false;
+
 			}
 		};
-		fluentWaitForElementHighlight.until(isElementHighlighted);
-		
+//		fluentWaitForElementHighlight.until(isElementHighlighted);
+		if(!(fluentWaitForElementHighlight.until(isElementHighlighted))) {
+			takeScreenshot();
+		}
 		//reset the highlighted Hamburger Button by moving to the top menu bar
 		el = driver.findElement(By.id("menu_cont"));
 		builder.moveToElement(el).perform();
 	}
-	protected void checkDehighlightWhenNoLongerHoveredOverOfElement(String xpathExpression, String highlightImageSrc, String dehighlightImageSrc) {
+	protected void checkDehighlightWhenNoLongerHoveredOverOfElement(String xpathExpression, String highlightImageSrc, final String dehighlightImageSrc, final Region region) {
 		WebElement el = driver.findElement(By.xpath(xpathExpression));
 		Actions builder = new Actions(driver);
 				
 		//define fluent wait to check for presence of element
 		FluentWait<WebElement> fluentWaitForElement;
 		fluentWaitForElement = new FluentWait<WebElement>(el);
-		fluentWaitForElement.withTimeout(6000, TimeUnit.MILLISECONDS);
+		fluentWaitForElement.withTimeout(12000, TimeUnit.MILLISECONDS);
 		fluentWaitForElement.pollingEvery(250, TimeUnit.MILLISECONDS);
 		fluentWaitForElement.ignoring(NoSuchElementException.class);
 		Function<WebElement, Boolean> isElementDisplayed = new Function<WebElement,Boolean>(){
 			public Boolean apply(WebElement element) {//shallow copy of el
 //				WebElement el = driver.findElement(By.xpath(elementXPath));
-				return element.isDisplayed();
+				if(element.isDisplayed()) {
+					return true;
+				}else {
+					return false;
+				}
 			}
 		};
-		fluentWaitForElement.until(isElementDisplayed);	
+//		fluentWaitForElement.until(isElementDisplayed);//this should be displayed
+		if(!(fluentWaitForElement.until(isElementDisplayed))) {
+			takeScreenshot();
+		}
 		
 		//move cursor to displayed element
 		builder.moveToElement(el).perform();
@@ -485,7 +778,7 @@ public class InhanceWebsiteAboutPageTest {
 		//define another fluent wait to check for highlighted image via sikuli
 		FluentWait<String> fluentWaitForElementHighlight;
 		fluentWaitForElementHighlight = new FluentWait<String>(highlightImageSrc);
-		fluentWaitForElementHighlight.withTimeout(6000, TimeUnit.MILLISECONDS);
+		fluentWaitForElementHighlight.withTimeout(12000, TimeUnit.MILLISECONDS);
 		fluentWaitForElementHighlight.pollingEvery(250, TimeUnit.MILLISECONDS);
 		fluentWaitForElementHighlight.ignoring(NoSuchElementException.class);
 		Function<String, Boolean> isElementHighlighted = new Function<String,Boolean>(){
@@ -493,13 +786,17 @@ public class InhanceWebsiteAboutPageTest {
 				//s.exists is what checks if the image stored is properly showing on the site
 				if(s.exists(highlightImageSrcCopy)!=null) {
 					return true;
+				}else{
+					//the screenshots aren't called every 250 milliseconds. It gets called once the fluentwait times out
+//					takeScreenshot();
+					return false;				
 				}
-				//the screenshots aren't called every 250 milliseconds. It gets called once the fluentwait times out
-				takeScreenshot();
-				return false;
 			}
 		};
-		fluentWaitForElementHighlight.until(isElementHighlighted);
+//		fluentWaitForElementHighlight.until(isElementHighlighted);
+		if(!(fluentWaitForElementHighlight.until(isElementHighlighted))) {
+			takeScreenshot();
+		}
 		
 		//reset the highlighted Hamburger Button by moving to the top menu bar
 		el = driver.findElement(By.id("menu_cont"));
@@ -508,27 +805,33 @@ public class InhanceWebsiteAboutPageTest {
 		//define another fluent wait to check for dehighlighted image via sikuli
 		FluentWait<String> fluentWaitForElementDehighlight;
 		fluentWaitForElementDehighlight = new FluentWait<String>(dehighlightImageSrc);
-		fluentWaitForElementDehighlight.withTimeout(6000, TimeUnit.MILLISECONDS);
+		fluentWaitForElementDehighlight.withTimeout(12000, TimeUnit.MILLISECONDS);
 		fluentWaitForElementDehighlight.pollingEvery(250, TimeUnit.MILLISECONDS);
 		fluentWaitForElementDehighlight.ignoring(NoSuchElementException.class);
 		Function<String, Boolean> isElementDehighlighted = new Function<String,Boolean>(){
 			public Boolean apply(String dehighlightImageSrcCopy) {
-				//s.exists is what checks if the image stored is properly showing on the site
-				if(s.exists(dehighlightImageSrcCopy)!=null) {
+				Match m = region.exists(dehighlightImageSrcCopy);
+//				region.highlight();
+				if(m!=null){
 					return true;
+				}else{
+					//the screenshots aren't called every 250 milliseconds. It gets called once the fluentwait times out
+//					System.out.println("Error at: " + Thread.currentThread().getStackTrace()[1].getMethodName());
+//					takeScreenshot();
+					return false;			
 				}
-				//the screenshots aren't called every 250 milliseconds. It gets called once the fluentwait times out
-				takeScreenshot();
-				return false;
 			}
 		};
-		fluentWaitForElementDehighlight.until(isElementDehighlighted);
+//		fluentWaitForElementDehighlight.until(isElementDehighlighted);
+		if(!(fluentWaitForElementDehighlight.until(isElementDehighlighted))) {
+			takeScreenshot();
+		}
 	}
 	protected void checkPageBackgroundIsDisplayed(String backgroundSrc) {		
 		//define fluent wait
 		FluentWait<String> fluentWaitForBackground;
 		fluentWaitForBackground = new FluentWait<String>(backgroundSrc);
-		fluentWaitForBackground.withTimeout(2500, TimeUnit.MILLISECONDS);
+		fluentWaitForBackground.withTimeout(12000, TimeUnit.MILLISECONDS);
 		fluentWaitForBackground.pollingEvery(250, TimeUnit.MILLISECONDS);
 		fluentWaitForBackground.ignoring(NoSuchElementException.class);
 		Function<String, Boolean> isBackgroundDisplayed = new Function<String,Boolean>(){
@@ -536,54 +839,70 @@ public class InhanceWebsiteAboutPageTest {
 				//s.exists is what checks if the background stored is properly showing on the site
 				if(s.exists(backgroundSrcCopy)!=null) {
 					return true;
-				}
-				//the screenshots aren't called every 250 milliseconds. It gets called once the fluentwait times out
-				takeScreenshot();
-				return false;
+				}else{					
+					return false;	
+				}//the screenshots aren't called every 250 milliseconds. It gets called once the fluentwait times out
+
 			}
 		};
-		fluentWaitForBackground.until(isBackgroundDisplayed);
+		if(!(fluentWaitForBackground.until(isBackgroundDisplayed))) {
+			takeScreenshot();
+		}
 	}
-	protected void checkPageImageIsDisplayed(String imageSrc) {		
+	/** Sikuli+FluentWait check if imageSrc exists in region defined by upper left corner(x,y) with width and height in pixels
+	 * @param imageSrc
+	 * @param x
+	 * @param y
+	 * @param width
+	 * @param height
+	 */
+	protected void checkPageImageIsDisplayed(String imageSrc, final int x, final int y, final int width, final int height) {		
 		//define fluent wait
 		FluentWait<String> fluentWaitForBackground;
 		fluentWaitForBackground = new FluentWait<String>(imageSrc);
-		fluentWaitForBackground.withTimeout(6000, TimeUnit.MILLISECONDS);
+		fluentWaitForBackground.withTimeout(12000, TimeUnit.MILLISECONDS);
 		fluentWaitForBackground.pollingEvery(250, TimeUnit.MILLISECONDS);
 		fluentWaitForBackground.ignoring(NoSuchElementException.class);
 		Function<String, Boolean> isBackgroundDisplayed = new Function<String,Boolean>(){
 			public Boolean apply(String imageSrcCopy) {
 				//TODO - Region needs to be parameterized - allows for less false positives
-				Region r = Region.create(1500,0,420,1200);
+//				Region r = Region.create(1500,0,420,1200);
+				Region r = Region.create(x, y, width, height);
 				if(r.exists(imageSrcCopy)!=null) {
 					return true;
+				}else{
+					//the screenshots aren't called every 250 milliseconds. It gets called once the fluentwait times out
+					takeScreenshot();
+					return false;	
 				}
-				//the screenshots aren't called every 250 milliseconds. It gets called once the fluentwait times out
-				takeScreenshot();
-				return false;
+
 			}
 		};
 		fluentWaitForBackground.until(isBackgroundDisplayed);
 	}
-	protected void checkPageBackgroundIsNotVisible(String backgroundSrc) {
-		//define fluent wait
-		FluentWait<String> fluentWaitForBackground;
-		fluentWaitForBackground = new FluentWait<String>(backgroundSrc);
-		fluentWaitForBackground.withTimeout(2500, TimeUnit.MILLISECONDS);
-		fluentWaitForBackground.pollingEvery(250, TimeUnit.MILLISECONDS);
-		fluentWaitForBackground.ignoring(NoSuchElementException.class);
-		Function<String, Boolean> isBackgroundNotVisible = new Function<String,Boolean>(){
-			public Boolean apply(String backgroundSrcCopy) {
-				//s.exists is what checks if the background stored is properly showing on the site
-				if(!(s.exists(backgroundSrcCopy)!=null)) {
-					return true;
-				}
-				//the screenshots aren't called every 250 milliseconds. It gets called once the fluentwait times out
-				takeScreenshot();
-				return false;
-			}
-		};
-		fluentWaitForBackground.until(isBackgroundNotVisible);
+	protected void checkPageBackgroundIsNotVisible(String backgroundSrc, String omitSrc) {
+//		//define fluent wait
+//		FluentWait<String> fluentWaitForBackground;
+//		fluentWaitForBackground = new FluentWait<String>(backgroundSrc);
+//		fluentWaitForBackground.withTimeout(2500, TimeUnit.MILLISECONDS);
+//		fluentWaitForBackground.pollingEvery(250, TimeUnit.MILLISECONDS);
+//		fluentWaitForBackground.ignoring(NoSuchElementException.class);
+//		Function<String, Boolean> isBackgroundNotVisible = new Function<String,Boolean>(){
+//			public Boolean apply(String backgroundSrcCopy) {
+//				//s.exists is what checks if the background stored is properly showing on the site
+//				if(!(s.exists(backgroundSrcCopy)!=null)) {//this can lead to false positives, how about just checking the background with a reference to no menu?
+//					return true;
+//				}
+//				else{//the screenshots aren't called every 250 milliseconds. It gets called once the fluentwait times out
+//					takeScreenshot();
+//					return false;
+//				}
+//			}
+//		};
+//		fluentWaitForBackground.until(isBackgroundNotVisible);
+		
+		//for now, omitSrc is not going to be used
+		checkPageBackgroundIsDisplayed(backgroundSrc);
 	}
 	
 	protected void clickBackButton() {

@@ -8,7 +8,7 @@
           <include name="setUp"/>
           <include name="afterMethod"/>
           <include name="tearDown"/>
-          <include name="given_AboutHamburgerButton_when_Pressed_then_MenuIsDisplayed"/>
+          <include name="given_AboutEnergyLink_when_Clicked_then_EnergyPageIsLoaded"/>
         </methods>
       </class> <!-- com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest -->
     </classes>
