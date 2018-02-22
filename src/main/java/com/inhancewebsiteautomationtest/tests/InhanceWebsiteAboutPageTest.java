@@ -29,6 +29,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.remote.RemoteWebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
@@ -130,6 +132,14 @@ public class InhanceWebsiteAboutPageTest {
 	private String energyLinkUnhovered;
 	private String energyPageAddress;
 	private String energyBackground;
+	private String automotiveLinkHovered;
+	private String automotiveLinkXPath;
+	private String automotiveLinkUnhovered;
+	private String automotivePageAddress;
+	private String automotiveBackground;
+	private String moreButtonXPath;
+	private String moreButtonHovered;
+	private String moreButtonUnhovered;
 
 	InhanceWebsiteAboutPageTest(){
 		//TODO will have to make these global field values externally input-able
@@ -148,6 +158,8 @@ public class InhanceWebsiteAboutPageTest {
 		iTTPageAddress = "http://www.inhance.com/#industries!IT/Telecom";
 		healthcarePageAddress = "http://www.inhance.com/#industries!healthcare";
 		energyPageAddress = "http://www.inhance.com/#industries!energy";
+		automotivePageAddress = "http://www.inhance.com/#industries!Automotive";
+		
 		waitInSecondsForBackground = 10;
 		waitForDynamicElement = 6;
 		fullScreenPageHeight = "1086";
@@ -162,6 +174,7 @@ public class InhanceWebsiteAboutPageTest {
 		iTTBackground = "1519170407860.png";
 		healthcareBackground = "1519176242130.png";
 		energyBackground = "1519177139633.png";
+		automotiveBackground = "1519244588151.png";
 		logoButtonHomeHighlighted = "1518567362868.png";
 		logoButtonWorkHighlighted = "1518567523359.png";
 		logoButtonAboutHighlighted = "1518567538418.png";
@@ -205,7 +218,8 @@ public class InhanceWebsiteAboutPageTest {
 		iTTelecomLinkXPath = "//div[@name='IT/Telecom']//div[@class='label']";
 		healthcareLinkXPath = "//div[@name='healthcare']//div[@class='label']";
 		energyLinkXPath = "//div[@name='energy']//div[@class='label']";
-
+		automotiveLinkXPath = "//div[@name='Automotive']//div[@class='label']";
+		moreButtonXPath = "//div[@id='mobile_footer']//button[@section='contact']";
 		aerospaceLinkHovered = "1519167128893.png";
 		aerospaceLinkUnhovered = "1519166713599.png";
 		iTTelecomLinkHovered = "1519169670608.png";
@@ -214,6 +228,10 @@ public class InhanceWebsiteAboutPageTest {
 		healthcareLinkUnhovered = "1519176054901.png";
 		energyLinkHovered = "1519177112834.png";
 		energyLinkUnhovered = "1519177120956.png";
+		automotiveLinkHovered = "1519244299388.png";
+		automotiveLinkUnhovered = "1519244285498.png";
+		moreButtonHovered = "1519245111062.png";
+		moreButtonUnhovered = "1519245335653.png";
 		
 		width = 1920;
 		height = 1200;
@@ -513,31 +531,85 @@ public class InhanceWebsiteAboutPageTest {
 //		checkAddressOfPage(healthcarePageAddress);
 //		checkPageBackgroundIsDisplayed(healthcareBackground);
 //	}
-	@Test
-	protected void given_AboutEnergyLink_when_Hovered_then_Animate(){
+//	@Test
+//	protected void given_AboutEnergyLink_when_Hovered_then_Animate(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		checkHighlightWhenHoveredOverOfElement(energyLinkXPath, energyLinkHovered);
+//	}
+//	@Test
+//	protected void given_AboutEnergyLink_when_Unhovered_then_Animate(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		checkDehighlightWhenNoLongerHoveredOverOfElement(energyLinkXPath, energyLinkHovered, energyLinkUnhovered, lowerHalf);
+//	}
+//	@Test
+//	protected void given_AboutEnergyLink_when_Clicked_then_EnergyPageIsLoaded(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		clickButton(energyLinkXPath);
+//		checkAddressOfPage(energyPageAddress);
+//		checkPageBackgroundIsDisplayed(energyBackground);
+//	}
+//	@Test
+//	protected void given_AboutAutomotiveLink_when_Hovered_then_Animate(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		checkHighlightWhenHoveredOverOfElement(automotiveLinkXPath, automotiveLinkHovered);
+//	}
+//	@Test
+//	protected void given_AboutAutomotiveLink_when_Unhovered_then_Animate(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		checkDehighlightWhenNoLongerHoveredOverOfElement(automotiveLinkXPath, automotiveLinkHovered, automotiveLinkUnhovered, lowerHalf);
+//	}
+//	@Test
+//	protected void given_AboutAutomotiveLink_when_Clicked_then_EnergyPageIsLoaded(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+//		clickButton(automotiveLinkXPath);
+//		checkAddressOfPage(automotivePageAddress);
+//		checkPageBackgroundIsDisplayed(automotiveBackground);
+//	}
+	//TODO
+	@Test 
+	protected void given_AboutMoreButton_when_Hovered_then_Animate(){
 		clickButton(hamburgerXPath);
 		clickButton(aboutXPath);
 		checkAddressOfPage(aboutPageAddress);
-		checkHighlightWhenHoveredOverOfElement(energyLinkXPath, energyLinkHovered);
+//		scrollDownXFullScreenPageHeight(2);
+		scrollDownXFullScreenPageHeightAndWait(2);
+//		waitForScrollToFinish();
+		checkHighlightWhenHoveredOverOfElement(moreButtonXPath, moreButtonHovered);
 	}
-	@Test
-	protected void given_AboutEnergyLink_when_Unhovered_then_Animate(){
-		clickButton(hamburgerXPath);
-		clickButton(aboutXPath);
-		checkAddressOfPage(aboutPageAddress);
-		checkDehighlightWhenNoLongerHoveredOverOfElement(energyLinkXPath, energyLinkHovered, energyLinkUnhovered, lowerHalf);
-	}
-	@Test
-	protected void given_AboutEnergyLink_when_Clicked_then_EnergyPageIsLoaded(){
-		clickButton(hamburgerXPath);
-		clickButton(aboutXPath);
-		checkAddressOfPage(aboutPageAddress);
-		clickButton(energyLinkXPath);
-		checkAddressOfPage(energyPageAddress);
-		checkPageBackgroundIsDisplayed(energyBackground);
-	}
-//	@Test protected void given_AboutAutomotiveLink_when_Action_then_Result(){}
-//	@Test protected void given_AboutMoreButton_when_Action_then_Result(){}
+//	@Test
+//	protected void given_AboutMoreButton_when_Unhovered_then_Animate(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+////		scrollDownXFullScreenPageHeight(2);
+//		scrollDownXFullScreenPageHeightAndWait(2);
+////		waitForScrollToFinish();
+//		checkDehighlightWhenNoLongerHoveredOverOfElement(moreButtonXPath, moreButtonHovered, moreButtonUnhovered, lowerHalf);
+//	}
+//	@Test
+//	protected void given_AboutMoreButton_when_Clicked_then_ContactPageIsLoaded(){
+//		clickButton(hamburgerXPath);
+//		clickButton(aboutXPath);
+//		checkAddressOfPage(aboutPageAddress);
+////		scrollDownXFullScreenPageHeight(2);
+//		scrollDownXFullScreenPageHeightAndWait(2);
+////		waitForScrollToFinish();
+//		clickButton(moreButtonXPath);
+//		checkAddressOfPage(contactPageAddress);
+//		checkPageBackgroundIsDisplayed(contactBackground);
+//	}
 //	@Test protected void given_AboutRequestInfoLink_when_Action_then_Result(){}
 //	@Test protected void given_AboutCareersLink_when_Action_then_Result(){}
 //	@Test protected void given_AboutFacebookButton_when_Action_then_Result(){}
@@ -579,7 +651,6 @@ public class InhanceWebsiteAboutPageTest {
 			}
 		});		
 	}
-
 	
 	protected boolean checkIfOnTopOfPage() {
 		boolean onTop = false;
@@ -596,6 +667,57 @@ public class InhanceWebsiteAboutPageTest {
 		String scrollheight = (Integer.parseInt(fullScreenPageHeight)*x)+"";
 		jse.executeScript("window.scrollBy(0,"+scrollheight+")", "");
 		System.out.println("Scrolling");
+	}
+	protected void scrollDownXFullScreenPageHeightAndWait(int x) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		String scrollheight = (Integer.parseInt(fullScreenPageHeight)*x)+"";
+		System.out.println("Scrolling start: " + getPageYOffset());
+		jse.executeScript("window.scrollBy(0,"+scrollheight+")", "");
+
+		
+		Wait<JavascriptExecutor> wait = new FluentWait<JavascriptExecutor>(jse)
+			    .withTimeout(6, TimeUnit.SECONDS)
+			    .pollingEvery(1, TimeUnit.SECONDS)
+			    .ignoring(NoSuchElementException.class);
+
+		wait.until(new Function<JavascriptExecutor, Boolean>() 
+		{
+			public Boolean apply(JavascriptExecutor jseCopy) {
+				boolean scrollStatus = jseCopy.executeScript("return document.readyState").toString().equals("complete");
+				if(scrollStatus) {
+					System.out.println("Finally done scrolling: " + getPageYOffset());
+					return true;
+				}else {
+					System.out.println("Not done scrolling: " + getPageYOffset());
+					return false;
+				}
+			}
+		});	
+	}
+	protected void scrollDownXFullScreenPageHeightAndWait2(int x) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		String scrollheight = (Integer.parseInt(fullScreenPageHeight)*x)+"";
+		System.out.println("Scrolling start: " + getPageYOffset());
+		jse.executeScript("window.scrollBy(0,"+scrollheight+")", "");
+
+		Wait<JavascriptExecutor> wait = new FluentWait<JavascriptExecutor>(jse)
+			    .withTimeout(6, TimeUnit.SECONDS)
+			    .pollingEvery(1, TimeUnit.SECONDS)
+			    .ignoring(NoSuchElementException.class);
+
+		wait.until(new Function<JavascriptExecutor, Boolean>() 
+		{
+			public Boolean apply(JavascriptExecutor jseCopy) {
+				boolean scrollStatus = jseCopy.executeScript("return document.readyState").toString().equals("complete");
+				if(scrollStatus) {
+					System.out.println("Finally done scrolling: " + getPageYOffset());
+					return true;
+				}else {
+					System.out.println("Not done scrolling: " + getPageYOffset());
+					return false;
+				}
+			}
+		});	
 	}
 	
 	protected long getPageYOffset() {
@@ -697,6 +819,10 @@ public class InhanceWebsiteAboutPageTest {
 
 	protected void checkHighlightWhenHoveredOverOfElement(final String xpathExpression, final String highlightImageSrc) {
 		WebElement el = driver.findElement(By.xpath(xpathExpression));
+        Point classname = el.getLocation();
+        int xcordi = classname.getX();
+        int ycordi = classname.getY();
+        System.out.println("Element is located at: " + xcordi + ": "+ycordi);
 		Actions builder = new Actions(driver);
 				
 		//define fluent wait to check for presence of element
@@ -717,6 +843,19 @@ public class InhanceWebsiteAboutPageTest {
 			takeScreenshot();
 		}
 		//move cursor to displayed element
+		//Scrolling seems to mess with the bottom code
+		el = driver.findElement(By.xpath(xpathExpression));
+        classname = el.getLocation();
+        xcordi = classname.getX();
+        ycordi = classname.getY();
+        System.out.println("Element is located at: " + xcordi + ": "+ycordi);
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", el);
+        classname = el.getLocation();
+        xcordi = classname.getX();
+        ycordi = classname.getY();
+        System.out.println("Element is located at: " + xcordi + ": "+ycordi);
+ 
+//		builder.moveToElement(el).click().build().perform();
 		builder.moveToElement(el).perform();
 		
 		//define another fluent wait to check for highlighted image via sikuli
@@ -773,6 +912,7 @@ public class InhanceWebsiteAboutPageTest {
 		}
 		
 		//move cursor to displayed element
+		System.out.println("Clicking element");
 		builder.moveToElement(el).perform();
 		
 		//define another fluent wait to check for highlighted image via sikuli
@@ -920,6 +1060,24 @@ public class InhanceWebsiteAboutPageTest {
 			Assert.fail();
 		}		
 	}
+	//from https://stackoverflow.com/questions/45243992/verification-of-element-in-viewport-in-selenium
+	public static Boolean isVisibleInViewport(WebElement element) {
+		  WebDriver driver = ((RemoteWebElement)element).getWrappedDriver();
+
+		  return (Boolean)((JavascriptExecutor)driver).executeScript(
+		      "var elem = arguments[0],                 " +
+		      "  box = elem.getBoundingClientRect(),    " +
+		      "  cx = box.left + box.width / 2,         " +
+		      "  cy = box.top + box.height / 2,         " +
+		      "  e = document.elementFromPoint(cx, cy); " +
+		      "for (; e; e = e.parentElement) {         " +
+		      "  if (e === elem)                        " +
+		      "    return true;                         " +
+		      "}                                        " +
+		      "return false;                            "
+		      , element);
+		}
+
 	@AfterMethod
 	public void afterMethod() {
 		driver.get(baseUrl);

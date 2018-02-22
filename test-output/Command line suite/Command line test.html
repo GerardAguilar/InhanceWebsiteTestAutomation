@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Command line test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>22/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Feb 20 14:27:49 PST 2018</td>
+<td>Started on:</td><td>Wed Feb 21 09:59:57 PST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>189 seconds (189112 ms)</td>
+<tr><td>Total time:</td><td>32 seconds (32853 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,104 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutAerospaceLink_when_Clicked_then_AerospacePageIsLoaded()'><b>given_AboutAerospaceLink_when_Clicked_then_AerospacePageIsLoaded</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest$10@a38c7fe (tried for 6 second(s) with 250 MILLISECONDS interval)
-Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
-System info: host: &apos;DELL-XPS-15-12&apos;, ip: &apos;192.168.151.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.checkPageBackgroundIsDisplayed(InhanceWebsiteAboutPageTest.java:705)
-	at com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutAerospaceLink_when_Clicked_then_AerospacePageIsLoaded(InhanceWebsiteAboutPageTest.java:417)
-	at com.inhancewebsiteautomationtest.tests.MainAboutTest.main(MainAboutTest.java:12)
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1876682596", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1876682596'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest$10@a38c7fe (tried for 6 second(s) with 250 MILLISECONDS interval)
-Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
-System info: host: &apos;DELL-XPS-15-12&apos;, ip: &apos;192.168.151.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.checkPageBackgroundIsDisplayed(InhanceWebsiteAboutPageTest.java:705)
-	at com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutAerospaceLink_when_Clicked_then_AerospacePageIsLoaded(InhanceWebsiteAboutPageTest.java:417)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at com.inhancewebsiteautomationtest.tests.MainAboutTest.main(MainAboutTest.java:12)
-</pre></div></td>
-<td>9</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutAerospaceLink_when_Unhovered_then_Animate()'><b>given_AboutAerospaceLink_when_Unhovered_then_Animate</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest$9@27406a17 (tried for 6 second(s) with 250 MILLISECONDS interval)
-Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
-System info: host: &apos;DELL-XPS-15-12&apos;, ip: &apos;192.168.151.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.checkDehighlightWhenNoLongerHoveredOverOfElement(InhanceWebsiteAboutPageTest.java:684)
-	at com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutAerospaceLink_when_Unhovered_then_Animate(InhanceWebsiteAboutPageTest.java:408)
-	at com.inhancewebsiteautomationtest.tests.MainAboutTest.main(MainAboutTest.java:12)
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace45023307", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace45023307'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest$9@27406a17 (tried for 6 second(s) with 250 MILLISECONDS interval)
-Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
-System info: host: &apos;DELL-XPS-15-12&apos;, ip: &apos;192.168.151.117&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.checkDehighlightWhenNoLongerHoveredOverOfElement(InhanceWebsiteAboutPageTest.java:684)
-	at com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutAerospaceLink_when_Unhovered_then_Animate(InhanceWebsiteAboutPageTest.java:408)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at com.inhancewebsiteautomationtest.tests.MainAboutTest.main(MainAboutTest.java:12)
-</pre></div></td>
-<td>13</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -173,115 +75,20 @@ Driver info: driver.version: unknown
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutAerospaceLink_when_Hovered_then_Animate()'><b>given_AboutAerospaceLink_when_Hovered_then_Animate</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
+<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutEnergyLink_when_Clicked_then_EnergyPageIsLoaded()'><b>given_AboutEnergyLink_when_Clicked_then_EnergyPageIsLoaded</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
 <td></td>
-<td>3</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
+<td>8</td>
+<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@77cd7a0</td></tr>
 <tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutDownArrowButton_when_Clicked_then_ContactPageIsLoaded()'><b>given_AboutDownArrowButton_when_Clicked_then_ContactPageIsLoaded</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td></td>
-<td>7</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutHamburgerButtonAboutSelection_when_Clicked_then_MenuDisappears()'><b>given_AboutHamburgerButtonAboutSelection_when_Clicked_then_MenuDisappears</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td></td>
-<td>4</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutHamburgerButtonAboutSelection_when_Hovered_then_Highlighted()'><b>given_AboutHamburgerButtonAboutSelection_when_Hovered_then_Highlighted</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td></td>
-<td>3</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutHamburgerButtonAboutSelection_when_Unhovered_then_Dehighlighted()'><b>given_AboutHamburgerButtonAboutSelection_when_Unhovered_then_Dehighlighted</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td></td>
-<td>4</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutHamburgerButtonContactSelection_when_Clicked_then_ContactPageIsLoaded()'><b>given_AboutHamburgerButtonContactSelection_when_Clicked_then_ContactPageIsLoaded</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td></td>
-<td>4</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutHamburgerButtonContactSelection_when_Hovered_then_Highlighted()'><b>given_AboutHamburgerButtonContactSelection_when_Hovered_then_Highlighted</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td></td>
-<td>4</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutHamburgerButtonContactSelection_when_Unhovered_then_Dehighlighted()'><b>given_AboutHamburgerButtonContactSelection_when_Unhovered_then_Dehighlighted</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td></td>
-<td>5</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutHamburgerButtonNewsSelection_when_Clicked_then_NewsPageIsLoaded()'><b>given_AboutHamburgerButtonNewsSelection_when_Clicked_then_NewsPageIsLoaded</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td></td>
-<td>7</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutHamburgerButtonNewsSelection_when_Hovered_then_Highlighted()'><b>given_AboutHamburgerButtonNewsSelection_when_Hovered_then_Highlighted</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td></td>
-<td>4</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutHamburgerButtonNewsSelection_when_Unhovered_then_Dehighlighted()'><b>given_AboutHamburgerButtonNewsSelection_when_Unhovered_then_Dehighlighted</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td></td>
-<td>5</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutHamburgerButtonWorkSelection_when_Clicked_then_WorkPageIsLoaded()'><b>given_AboutHamburgerButtonWorkSelection_when_Clicked_then_WorkPageIsLoaded</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td></td>
-<td>4</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutHamburgerButtonWorkSelection_when_Hovered_then_Highlighted()'><b>given_AboutHamburgerButtonWorkSelection_when_Hovered_then_Highlighted</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td></td>
-<td>4</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutHamburgerButtonWorkSelection_when_Unhovered_then_Dehighlighted()'><b>given_AboutHamburgerButtonWorkSelection_when_Unhovered_then_Dehighlighted</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td></td>
-<td>6</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutHamburgerButtonXSelection_when_Pressed_then_MenuDisappears()'><b>given_AboutHamburgerButtonXSelection_when_Pressed_then_MenuDisappears</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td></td>
-<td>3</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutHamburgerButton_when_Hovered_then_Highlighted()'><b>given_AboutHamburgerButton_when_Hovered_then_Highlighted</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
+<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutEnergyLink_when_Hovered_then_Animate()'><b>given_AboutEnergyLink_when_Hovered_then_Animate</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
 <td></td>
 <td>2</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
+<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@77cd7a0</td></tr>
 <tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutHamburgerButton_when_Pressed_then_MenuIsDisplayed()'><b>given_AboutHamburgerButton_when_Pressed_then_MenuIsDisplayed</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
+<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutEnergyLink_when_Unhovered_then_Animate()'><b>given_AboutEnergyLink_when_Unhovered_then_Animate</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
 <td></td>
 <td>2</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutHamburgerButton_when_Unhovered_then_Dehighlighted()'><b>given_AboutHamburgerButton_when_Unhovered_then_Dehighlighted</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td></td>
-<td>5</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutLogoButton_when_Hovered_then_Highlighted()'><b>given_AboutLogoButton_when_Hovered_then_Highlighted</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td></td>
-<td>3</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutLogoButton_when_Unhovered_then_Dehighlighted()'><b>given_AboutLogoButton_when_Unhovered_then_Dehighlighted</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td></td>
-<td>2</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutPage_when_Loaded_then_AboutPageIsLoaded()'><b>given_AboutPage_when_Loaded_then_AboutPageIsLoaded</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td></td>
-<td>0</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
-<tr>
-<td title='com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutPage_when_Loaded_then_PageBackgroundIsDisplayed()'><b>given_AboutPage_when_Loaded_then_PageBackgroundIsDisplayed</b><br>Test class: com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest</td>
-<td></td>
-<td>3</td>
-<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@e25b2fe</td></tr>
+<td>com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@77cd7a0</td></tr>
 </table><p>
 </body>
 </html>

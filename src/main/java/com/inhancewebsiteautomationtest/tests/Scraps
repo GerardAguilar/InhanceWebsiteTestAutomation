@@ -252,3 +252,24 @@
 //              return true;
 //          }
 //      });
+//---
+//  protected void waitForScrollToFinish(int y) {       
+//      Wait<JavascriptExecutor> wait = new FluentWait<JavascriptExecutor>(executor)
+//              .withTimeout(6, TimeUnit.SECONDS)
+//              .pollingEvery(1, TimeUnit.SECONDS)
+//              .ignoring(NoSuchElementException.class);
+//
+//      wait.until(new Function<JavascriptExecutor, Boolean>() 
+//      {
+//          public Boolean apply(JavascriptExecutor executor) {
+//              boolean scrollStatus = executor.executeScript("return document.readyState").toString().equals("complete");
+//              if(scrollStatus) {
+//                  System.out.println("Finally: " + getPageYOffset());
+//                  return true;
+//              }else {
+//                  System.out.println("Not Zero: " + getPageYOffset());
+//                  return false;
+//              }
+//          }
+//      });     
+//  }

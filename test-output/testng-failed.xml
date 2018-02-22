@@ -8,7 +8,7 @@
           <include name="setUp"/>
           <include name="afterMethod"/>
           <include name="tearDown"/>
-          <include name="given_AboutEnergyLink_when_Clicked_then_EnergyPageIsLoaded"/>
+          <include name="given_AboutMoreButton_when_Hovered_then_Animate"/>
         </methods>
       </class> <!-- com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest -->
     </classes>
