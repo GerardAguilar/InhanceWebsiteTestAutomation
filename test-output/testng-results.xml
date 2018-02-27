@@ -1,72 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30849" started-at="2018-02-21T22:00:02Z" finished-at="2018-02-21T22:00:33Z">
+  <suite name="Default suite" duration-ms="13621" started-at="2018-02-27T01:53:32Z" finished-at="2018-02-27T01:53:46Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30849" started-at="2018-02-21T22:00:02Z" finished-at="2018-02-21T22:00:33Z">
-      <class name="com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="setUp" is-config="true" duration-ms="11912" started-at="2018-02-21T14:00:02Z" finished-at="2018-02-21T14:00:14Z">
+    <test name="Default test" duration-ms="13621" started-at="2018-02-27T01:53:32Z" finished-at="2018-02-27T01:53:46Z">
+      <class name="com.inhancewebsiteautomationtest.tests.FrameworkWebAutomation">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.inhancewebsiteautomationtest.tests.FrameworkWebAutomation@1fc2b765]" name="setUp" is-config="true" duration-ms="4231" started-at="2018-02-26T17:53:32Z" finished-at="2018-02-26T17:53:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="given_AboutMoreButton_when_Hovered_then_Animate()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="given_AboutMoreButton_when_Hovered_then_Animate" duration-ms="15720" started-at="2018-02-21T14:00:14Z" finished-at="2018-02-21T14:00:30Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest$7@32115b28 (tried for 12 second(s) with 250 MILLISECONDS interval)
-Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:25:02.294Z'
-System info: host: 'DELL-XPS-15-12', ip: '192.168.151.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: driver.version: unknown]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest$7@32115b28 (tried for 12 second(s) with 250 MILLISECONDS interval)
-Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:25:02.294Z'
-System info: host: 'DELL-XPS-15-12', ip: '192.168.151.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.checkHighlightWhenHoveredOverOfElement(InhanceWebsiteAboutPageTest.java:856)
-	at com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest.given_AboutMoreButton_when_Hovered_then_Animate(InhanceWebsiteAboutPageTest.java:588)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method status="PASS" signature="test()[pri:0, instance:com.inhancewebsiteautomationtest.tests.FrameworkWebAutomation@1fc2b765]" name="test" duration-ms="8113" started-at="2018-02-26T17:53:36Z" finished-at="2018-02-26T17:53:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- given_AboutMoreButton_when_Hovered_then_Animate -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="afterMethod" is-config="true" duration-ms="2686" started-at="2018-02-21T14:00:30Z" finished-at="2018-02-21T14:00:33Z">
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.inhancewebsiteautomationtest.tests.FrameworkWebAutomation@1fc2b765]" name="afterMethod" is-config="true" duration-ms="262" started-at="2018-02-26T17:53:45Z" finished-at="2018-02-26T17:53:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest@51c8530f]" name="tearDown" is-config="true" duration-ms="510" started-at="2018-02-21T14:00:33Z" finished-at="2018-02-21T14:00:33Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.inhancewebsiteautomationtest.tests.FrameworkWebAutomation@1fc2b765]" name="tearDown" is-config="true" duration-ms="994" started-at="2018-02-26T17:53:45Z" finished-at="2018-02-26T17:53:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.inhancewebsiteautomationtest.tests.InhanceWebsiteAboutPageTest -->
+      </class> <!-- com.inhancewebsiteautomationtest.tests.FrameworkWebAutomation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

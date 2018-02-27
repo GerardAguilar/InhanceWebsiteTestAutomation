@@ -9,7 +9,6 @@ public class MainOne {
 		try {
 			automationTestSeleniumFormatted.setUp();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -43,7 +42,6 @@ public class MainOne {
 		try {
 			automationTestSeleniumFormatted.tearDown();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
